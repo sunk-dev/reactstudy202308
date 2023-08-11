@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ExpenseForm.css';
-const ExpenseForm = () => {
+const ExpenseForm = ({onSaveExpense}) => {
   const [userInput, setuserInput] = useState({
     title: '',
     price: '',
@@ -8,10 +8,11 @@ const ExpenseForm = () => {
   });
 
   const titleChangeHandler = (e) => {
-    setuserInput({
-      ...userInput, //기존꺼유지후 title 수정
+    // const foo=()=>({}); ->빈객체를 리턴한다
+    setuserInput((preUserInput) => ({
+      ...preUserInput,
       title: e.target.value,
-    });
+    }));
   };
   const priceChangeHandler = (e) => {
     setuserInput({
@@ -29,6 +30,7 @@ const ExpenseForm = () => {
     e.preventDefault(); //submit차단
     console.log(`제출 버튼 누름`);
     console.log(userInput);
+    onSaveExpense(userInput);
 
     // console.log(newExpense);
     // //입력창리셋
