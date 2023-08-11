@@ -8,17 +8,17 @@ const App = () => {
     {
       title:"바나나",
       price:7000,
-      date:new Date(2022,6,21)
+      date:new Date(2022,6-1,21)
     },
     {
       title:"사과",
       price:5000,
-      date:new Date(2022,7,21)
+      date:new Date(2022,7-1,21)
     },
     {
       title:"그린애플",
       price:10000,
-      date:new Date(2022,8,21)
+      date:new Date(2022,8-1,21)
     }
   ]
   return (
