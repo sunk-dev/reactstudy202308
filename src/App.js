@@ -1,8 +1,9 @@
 import React from 'react';
 
-import ExpenseItem from './components/ExpenseItem';
-import ExpenseList from './components/ExpenseList';
+import ExpenseItem from './components/Expenses/ExpenseItem';
+import ExpenseList from './components/Expenses/ExpenseList';
 import Hello from './Hello';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
   //지출항목 객체배열
@@ -23,9 +24,10 @@ const App = () => {
       date: new Date(2022, 8 - 1, 21),
     },
   ];
-  console.log((`앱실행`));
+  console.log(`앱실행`);
   return (
     <>
+      <NewExpense />
       <ExpenseList items={expenses} />
     </>
   );

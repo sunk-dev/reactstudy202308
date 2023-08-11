@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //css로딩
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
-import Card from './UI/Card';
+import Card from '../UI/Card';
 const ExpenseItem = ({ title, price: propsPrice, date }) => {
   // let itemTitle = title;
   //값이 변경되어 화면에 반영되어야 하는 값들은
@@ -32,7 +32,6 @@ const ExpenseItem = ({ title, price: propsPrice, date }) => {
     //   return '메롱'; //메롱이 새로운 값이 되며 기존 스냅샥과 다른경우 화면을 리렌더링, 같을경우 하지 않음.
     // });
     setItemTitle('메롱');
- 
   };
   //버튼 가져오기
 
