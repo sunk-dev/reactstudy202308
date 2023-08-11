@@ -25,15 +25,8 @@ const App = () => {
   ];
   return (
     <>
-      <ExpenseList items={expenses}/>
-      <Hello>
-        <ul>
-          <li>사과</li>
-          <li>포도</li>
-          <li>복숭아</li>
-        </ul>
-      </Hello>
-      </>
+      <ExpenseList items={expenses} />
+    </>
   );
 };
 
