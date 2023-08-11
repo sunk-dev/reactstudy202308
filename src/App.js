@@ -23,6 +23,7 @@ const App = () => {
       date: new Date(2022, 8 - 1, 21),
     },
   ];
+  console.log((`앱실행`));
   return (
     <>
       <ExpenseList items={expenses} />
