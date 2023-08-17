@@ -50,7 +50,7 @@ const ExpenseList = ({ items }) => {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      <ExpensesChart />;{expenseContent}
+      <ExpensesChart expenses={filteredItems} />;{expenseContent}
     </Card>
   );
 };

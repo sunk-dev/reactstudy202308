@@ -2,8 +2,12 @@ import React from 'react';
 
 import './ChartBar.css';
 
-const ChartBar = ({ label }) => {
-  let barFillHeight = '30%';
+const ChartBar = ({ label ,currentValue,maxValue}) => {
+  let barFillHeight = '0%';
+  if(maxValue>0){
+    const percentage=(currentValue/maxValue)*100;
+    barFillHeight=percentage+'%';
+  }
   return (
     <div className="chart-bar">
       <div className="chart-bar__inner">

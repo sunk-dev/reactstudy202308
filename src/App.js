@@ -8,7 +8,7 @@ import NewExpense from './components/NewExpense/NewExpense';
 const App = () => {
   //지출항목 객체배열
   const expenses = [
-    { id: 1, title: '바나나', price: 7000, date: new Date(2022, 6 - 1, 21) },
+    { id: 1, title: '바나나', price: 20000, date: new Date(2022, 6 - 1, 21) },
     { id: 2, title: '사과', price: 5000, date: new Date(2022, 7 - 1, 21) },
     { id: 3, title: '그린애플', price: 10000, date: new Date(2022, 8 - 1, 21) },
     { id: 4, title: '치킨', price: 12000, date: new Date(2022, 9 - 8, 21) },
