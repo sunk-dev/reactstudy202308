@@ -19,16 +19,13 @@ const App = () => {
 
   const [goals, setGoals] = useState(DUMMY_DATA);
 
-  // courselist 조건부 렌더링
-  let listContent = <p style={{
-    color: 'red',
-    fontSize: '2em',
-    textAlign: 'center'
-  }}>목표를 등록해주세요!!</p>
-  if (goals.length > 0) {
-    listContent = <CourseList items={goals} />;
-  }
+  //삭제 이벤트 핸들러응 course item까지 내려 보내야함
+  const deleteGoalHandler=id=>{
+    console.log(id);
+    // const updateGoals=goals.filter(goal=>goal.id!==id);
+   setGoals((prevGoals)=>prevGoals.filter(goal=>goal.id!==id));
 
+  };
   // Input에게 전달할 함수
   const addGoalHandler = text => {
     console.log('전달받은 텍스트:', text);
@@ -40,7 +37,18 @@ const App = () => {
     // 상태변수(배열) 수정
     // const updateGoals = [...goals, newGoal];
     setGoals(prevGoals => [...prevGoals, newGoal]);
+  };
+  // courselist 조건부 렌더링
+  let listContent = <p style={{
+    color: 'red',
+    fontSize: '2em',
+    textAlign: 'center'
+  }}>목표를 등록해주세요!!</p>
+  if (goals.length > 0) {
+    listContent = <CourseList items={goals} onDelete={deleteGoalHandler} />;
   }
+
+
 
   return (
     <div>
